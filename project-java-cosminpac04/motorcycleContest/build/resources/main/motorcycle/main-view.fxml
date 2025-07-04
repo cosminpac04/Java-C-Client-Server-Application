@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="motorcycle.controller.MainController">
+    <top>
+        <Label text="Motorcycle Contest Manager" style="-fx-font-size: 20px; -fx-padding: 10px;" />
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <TableView fx:id="contestTable">
+                <columns>
+                    <TableColumn text="ID" fx:id="colId" />
+                    <TableColumn text="Rider" fx:id="colRider" />
+                    <TableColumn text="Engine Capacity" fx:id="colEngineCapacity" />
+                    <TableColumn text="Team" fx:id="colTeam" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="nameField" promptText="Name" />
+            <TextField fx:id="engineCapacityField" promptText="Engine Capacity" />
+            <TextField fx:id="teamField" promptText="Team" />
+            <Button text="Add Participant" onAction="#onAddParticipant" />
+            <Button text="Delete Participant" onAction="#onDeleteParticipant" />
+        </HBox>
+    </bottom>
+</BorderPane>
